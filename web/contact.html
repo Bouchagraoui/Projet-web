@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="stylesheet" href="contact.css">
+        <title>About</title>
+
+
+    </head>
+
+    <body>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="accueil.html"><img src="" alt="anis"></a></div>
+                <ul class="navItems">
+                    <li><a href="accueil.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/anis-bouchagraoui-7b038b27a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/anis.cha.7/?locale=fr_FR" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+            </nav>
+            <div class="wrapper">
+                <div class="cols cols0">
+                    <span class="topline">Hello</span>
+                    <h1>I'm <span class="multiText"></span></h1>
+                    <p>
+                        <form action="#" methode="post" name="f">
+                        <table>
+                            <tr>
+                                <td>Username</td>
+                                <td><input type="text" name="user" placeholder="Username " required></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td><input type="email" name="email" placeholder="Email " required></td>
+                            </tr>
+                            <tr>
+                                <td>Contact me</td>
+                                <td><input type="text" name="contactme" placeholder="Contact me  " required></td>
+                            </tr>
+                            <tr>
+                                <td><button type="submit" onclick="return verif()">Send</button></td>
+                                <td><button type="reset">Reset</button></td>
+                            </tr>
+                        </table>
+                    </form>
+                            <a href="accueil.html"><button type="button" >Return to Home Page</button></a>
+                    </p>
+                </div>
+                <div class="cols cols1">
+                    <div class="imgbox">
+                        <img src="Splash-PNG-Image.png" alt="" id="spalsh">
+                        <img src="imag anis.jpg" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            var typingEffect = new Typed(".multiText",{
+                strings: ["Anis","Engineer","Technician"],
+                loop:true,
+                typeSpeed: 100,
+                backSpeed: 80,
+                backDelay: 1500
+            })
+        </script>
+        <script>
+            function verif(){
+                var ch = f.user.value;
+                var ch1 = f.email.value;
+                var ch2 = f.contactme.value
+                if(ch.length == 0){alert("invalid name : you should write a caracter"); return false;}
+                else if(ch.length <2){alert("invalid name : you should write more than 2 caracters"); return false;}
+                else if(ch1.length == 0){alert("invalid email : you should write a caracter"); return false;}
+                else if(ch1.indexOf('@') == -1){alert("invalid email : you should write a @ caracter"); return false;}
+                else if(ch1.indexOf('.') == -1){alert("invalid email : you should write a . caracter"); return false;}
+                else if(ch2.length == 0){alert("invalid number : you should write a caracter"); return false;}
+                else if(ch2.length != 8){alert("invalid number : you should write a 8 caracter number"); return false;}
+            }
+        </script>
+    </body>
+</html>
